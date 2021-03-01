@@ -31,5 +31,14 @@ var app = new Vue({
         }
     },
     methods: {
-    }
+      ikon1change1: function(){
+
+      },
+      ikon2change1: function(){
+
+      },
+      ikon3change1: function(){
+        
+      }
+        }
 })
