@@ -14,3 +14,11 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  #maincont {
+    height: inherit;
+}
+  
+  #mainrow{
+    height: inherit;
+  }
