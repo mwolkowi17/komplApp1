@@ -28,6 +28,29 @@ var app = new Vue({
                 seen: true,
                 hover: false
               },
+              video: {
+
+                src: "",
+                seen: false
+              },
+              buttonforward1:{
+                seen: false
+              },
+              buttonreverse1:{
+                seen: false
+              },
+              buttonforward2:{
+                seen: false
+              },
+              buttonreverse2:{
+                seen: false
+              },
+              buttonforward3:{
+                seen: false
+              },
+              buttonreverse3:{
+                seen: false
+              }
         }
     },
     methods: {
@@ -35,10 +58,22 @@ var app = new Vue({
 
       },
       ikon2change1: function(){
-
+        this.ikon2.hover = false;
+        this.appbackground.src = backgrounds[1];
+        this.ikon1.seen = false;
+        this.ikon3.seen = false;
+        this.video.seen = true;
+        this.buttonreverse2.seen = true;
+        this.buttonforward2.seen = true;
       },
       ikon3change1: function(){
-        
+        this.ikon3.hover = false;
+      this.appbackground.src = backgrounds[1];
+      this.ikon1.seen = false;
+      this.ikon2.seen = false;
+      this.video.seen = true;
+      this.buttonreverse3.seen = true;
+      this.buttonforward3.seen = true;      
       }
         }
 })
