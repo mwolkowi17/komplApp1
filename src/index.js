@@ -1,6 +1,7 @@
 import Vue from 'vue/dist/vue.js';
 import { backgrounds } from './backgroundData.js';
 import { ikonyglowne } from './icons.js';
+import { planszeA } from './planszeAdane.js';
 
 var app = new Vue({
     el: '#app',
@@ -55,7 +56,12 @@ var app = new Vue({
     },
     methods: {
       ikon1change1: function(){
-
+        this.ikon1.hover = false;
+        this.appbackground.src = planszeA[0];
+        this.ikon2.seen = false;
+        this.ikon3.seen = false;
+        this.buttonreverse3.seen = true;
+        this.buttonforward3.seen = true;
       },
       ikon2change1: function(){
         this.ikon2.hover = false;
