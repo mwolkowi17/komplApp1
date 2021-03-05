@@ -149,7 +149,28 @@ var app = new Vue({
       }
     },
     btnrevB: function(){
+      if (this.licznik.planszeBlicz != 0) {
+        this.licznik.planszeBlicz--;
 
+      }
+
+      if (this.video.seen === true) {
+        this.video.seen = false;
+        this.appbackground.src = backgrounds[0];
+        this.ikon1.seen = true;
+        this.ikon2.seen = true;
+        this.ikon3.seen = true;
+        this.buttonreverse2.seen = false;
+        this.buttonforward2.seen = false;
+      }
+
+      if (this.appbackground.src === planszeB[0]){
+       this.appbackground.src = backgrounds[1];
+       this.video.seen = true;
+       this.licznik.planszeBlicz=0;
+      }
+
+     
     }
   }
 })
