@@ -171,6 +171,13 @@ var app = new Vue({
         this.licznik.planszeBlicz = 0;
       }
 
+      if (this.appbackground.src != backgrounds[0]) {
+        this.appbackground.src = planszeB[this.licznik.planszBClicz]
+        if(this.video.seen === true){
+          this.appbackground.src = backgrounds[1];
+        }
+      }
+
 
     },
     btnforC: function () {
