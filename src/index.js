@@ -2,6 +2,7 @@ import Vue from 'vue/dist/vue.js';
 import { backgrounds } from './backgroundData.js';
 import { ikonyglowne } from './icons.js';
 import { planszeA } from './planszeAdane.js';
+import { planszeB } from './planszeBdane.js';
 
 var app = new Vue({
   el: '#app',
@@ -120,12 +121,35 @@ var app = new Vue({
         this.licznik.planszeAlicz = 0;
       }
 
-      if (this.video.seen === true){
+      if (this.video.seen === true) {
         this.video.seen = false;
       }
-      
-        
-      
+
+    },
+    btnforB: function(){
+      if (this.video.seen === false) {
+        this.licznik.planszeBlicz++;
+        this.appbackground.src = planszeB[this.licznik.planszeBlicz];
+      }
+
+      if (this.licznik.planszeBlicz===0){
+        this.video.seen = false;
+        this.appbackground.src = planszeB[0];
+      }
+
+      if (this.licznik.planszeBlicz === 1){
+        this.licznik.planszeBlicz=0;
+        this.appbackground.src = backgrounds[0];
+        this.ikon1.seen = true;
+        this.ikon2.seen = true;
+        this.ikon3.seen = true;
+        this.buttonreverse2.seen = false;
+        this.buttonforward2.seen = false;
+
+      }
+    },
+    btnrevB: function(){
+
     }
   }
 })
