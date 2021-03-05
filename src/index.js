@@ -3,6 +3,7 @@ import { backgrounds } from './backgroundData.js';
 import { ikonyglowne } from './icons.js';
 import { planszeA } from './planszeAdane.js';
 import { planszeB } from './planszeBdane.js';
+import { planszeC } from './planszeCdane.js';
 
 var app = new Vue({
   el: '#app',
@@ -171,6 +172,33 @@ var app = new Vue({
       }
 
      
+    },
+    btnforC: function(){
+      if (this.video.seen === false) {
+        this.licznik.planszeClicz++;
+        this.appbackground.src = planszeC[this.licznik.planszeClicz]
+      }
+
+      if (this.licznik.planszeClicz===0){
+        this.video.seen = false;
+        this.appbackground.src = planszeC[0];
+      }
+
+      if (this.licznik.planszeClicz === 6){
+        this.licznik.planszeClicz=0;
+        this.appbackground.src = backgrounds[0];
+        this.ikon1.seen = true;
+        this.ikon2.seen = true;
+        this.ikon3.seen = true;
+        this.buttonreverse3.seen = false;
+        this.buttonforward3.seen = false;
+
+      }
+
+
+    },
+    btnrevC: function(){
+
     }
   }
 })
