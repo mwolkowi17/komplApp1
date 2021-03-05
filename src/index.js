@@ -119,6 +119,10 @@ var app = new Vue({
         this.buttonforward1.seen = false;
         this.licznik.planszeAlicz = 0;
       }
+
+      if (this.video.seen === true){
+        this.video.seen = false;
+      }
       
         
       
