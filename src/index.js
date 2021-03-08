@@ -31,6 +31,9 @@ var app = new Vue({
         seen: true,
         hover: false
       },
+      homeicon: {
+        seen: false
+      },
       video: {
 
         src: "",
@@ -69,6 +72,7 @@ var app = new Vue({
       this.ikon3.seen = false;
       this.buttonreverse1.seen = true;
       this.buttonforward1.seen = true;
+      this.homeicon.seen = true;
     },
     ikon2change1: function () {
       this.ikon2.hover = false;
@@ -78,6 +82,7 @@ var app = new Vue({
       this.video.seen = true;
       this.buttonreverse2.seen = true;
       this.buttonforward2.seen = true;
+      this.homeicon.seen= true;
     },
     ikon3change1: function () {
       this.ikon3.hover = false;
@@ -87,6 +92,7 @@ var app = new Vue({
       this.video.seen = true;
       this.buttonreverse3.seen = true;
       this.buttonforward3.seen = true;
+      this.homeicon.seen = true;
     },
     btnforA: function () {
       this.licznik.planszeAlicz++;
@@ -104,6 +110,7 @@ var app = new Vue({
         this.ikon1.seen = true;
         this.ikon2.seen = true;
         this.ikon3.seen = true;
+        this.homeicon.seen = false;
 
       }
     },
@@ -119,6 +126,7 @@ var app = new Vue({
         this.ikon3.seen = true;
         this.buttonreverse1.seen = false;
         this.buttonforward1.seen = false;
+        this.homeicon.seen = false;
         this.licznik.planszeAlicz = 0;
       }
 
@@ -146,6 +154,7 @@ var app = new Vue({
         this.ikon3.seen = true;
         this.buttonreverse2.seen = false;
         this.buttonforward2.seen = false;
+        this.homeicon.seen = false;
 
       }
     },
@@ -163,6 +172,7 @@ var app = new Vue({
         this.ikon3.seen = true;
         this.buttonreverse2.seen = false;
         this.buttonforward2.seen = false;
+        this.homeicon.seen = false;
       }
 
       if (this.appbackground.src === planszeB[0]) {
@@ -199,6 +209,7 @@ var app = new Vue({
         this.ikon3.seen = true;
         this.buttonreverse3.seen = false;
         this.buttonforward3.seen = false;
+        this.homeicon.seen = false;
 
       }
 
@@ -217,6 +228,7 @@ var app = new Vue({
         this.ikon3.seen = true;
         this.buttonreverse3.seen = false;
         this.buttonforward3.seen = false;
+        this.homeicon.seen = false;
       }
 
       if (this.appbackground.src === planszeC[0]) {
