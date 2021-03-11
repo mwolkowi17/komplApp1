@@ -32,6 +32,8 @@ var app = new Vue({
         hover: false
       },
       homeicon: {
+        src:ikonyglowne.home,
+        src2:ikonyglowne.homeclicked,
         seen: false
       },
       video: {
