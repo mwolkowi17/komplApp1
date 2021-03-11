@@ -60,7 +60,11 @@
           <button type="button" id="btnfor" class="btn btn-primary" v-if="buttonforward3.seen" v-on:click="btnforC">
             <img src="images/dalej.png">
           </button>
-          <img id="home" :src="homeicon.src" v-if="homeicon.seen" v-on:click="home_click">
+          <img id="home" :src="homeicon.src" v-if="homeicon.seen" 
+          @mouseover="homeicon.hover=true; homeicon.seen=false" @mouseleave=" homeicon.seen=true; homeicon.hover = false;">
+          <img id="home" :src="homeicon.src2" v-if="homeicon.hover" v-on:click="home_click"
+          @mouseover="homeicon.hover=true; homeicon.seen=false" @mouseleave=" homeicon.seen=true; homeicon.hover = false;">
+
 
       </div>
     </div>

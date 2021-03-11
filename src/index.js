@@ -34,7 +34,8 @@ var app = new Vue({
       homeicon: {
         src:ikonyglowne.home,
         src2:ikonyglowne.homeclicked,
-        seen: false
+        seen: false,
+        hover: false
       },
       video: {
 
@@ -263,6 +264,7 @@ var app = new Vue({
       this.ikon2.seen = true;
       this.ikon3.seen = true;
       this.homeicon.seen = false;
+      this.homeicon.hover = false;
     }
   }
 })
