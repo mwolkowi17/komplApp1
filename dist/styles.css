@@ -29,11 +29,17 @@ body, html {
     margin-right: auto;
   }
 
-  #btnrev{
+  #ikona_menu:hover{
+    cursor: pointer;
+  }
 
+  #btnrev{
     position: absolute;
     left: 30px;
+  }
 
+  #btnrev:hover{
+    cursor: pointer;
   }
 
   #btnfor{
@@ -41,8 +47,16 @@ body, html {
     right: 30px;
   }
 
+  #btnfor:hover{
+    cursor: pointer;
+  }
+
   #home{
     position: absolute;
     top: 30px;
     right: 30px;
+  }
+
+  #home:hover{
+    cursor: pointer;
   }
